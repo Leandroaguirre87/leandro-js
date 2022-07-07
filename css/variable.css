@@ -5,3 +5,9 @@
 .h1 {
   text-align: center;
 }
+
+.btnAgregar {
+  background-color: brown;
+  border-radius: 25px;
+  padding: 0.8px;
+}

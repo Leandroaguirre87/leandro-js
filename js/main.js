@@ -162,8 +162,30 @@ for (prod of productos) {
                           <p> Nombre del Producto : ${prod.nombre}<br>
                           <img src='imagenes/${prod.imagen} ' width='200'><br>
                           <b> Valor del Producto : $${prod.precio}<b></p>
+                          <button class= 'btnAgregar' id="boton"> Agregar al carrito</button>
                           <hr>`;
   contenedor.className = "productosDelCorralon"
 
   document.getElementById("productosCorralon").appendChild(contenedor)
+}
+
+// Ejemplo Eventos
+
+let botones = document.querySelectorAll(".btnAgregar")
+
+botones.forEach(boton => {
+  boton.addEventListener("click", agregadoAlCarrito)
+
+})
+
+
+
+function agregadoAlCarrito() {
+
+  let productoAgregado = document.createElement("div")
+
+  productoAgregado.innerHTML = `<p class='text-white text-center bg-success m-2 p-2'>El producto ha sido agregado!</p>`
+
+  document.getElementById("productoAgregado").appendChild(productoAgregado)
+
 }
